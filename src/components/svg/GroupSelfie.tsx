@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import { Animated } from "react-native";
 import Svg, { Path, G, Rect, ClipPath, Defs } from "react-native-svg";
-export default function GroupSelfie() {
+export default function GroupSelfie({end}: {end: () => void}) {
     const GroupAnimate = Animated.createAnimatedComponent(G)
     const PathAnimate = Animated.createAnimatedComponent(Path)
 
@@ -53,7 +53,7 @@ export default function GroupSelfie() {
             toValue: 1,
             duration: 1000,
             useNativeDriver: false
-        }).start()
+        }).start(end)
     }
     useEffect(LinePathOpacity, [])
     return (
