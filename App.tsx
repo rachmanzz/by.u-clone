@@ -11,10 +11,11 @@ import {
   Text,
   SafeAreaView
 } from 'react-native';
+import { Routers } from './src/Routers';
 
 
 const App = () => {
-  return <SafeAreaView><Text>This is work</Text></SafeAreaView>
+  return <Routers />
 };
 
 
