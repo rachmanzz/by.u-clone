@@ -4,6 +4,7 @@
 
 1. svgviewer https://www.svgviewer.dev/
 2. shadow-generator https://ethercreative.github.io/react-native-shadow-generator/
+3. figma
 
 # Credit
 
