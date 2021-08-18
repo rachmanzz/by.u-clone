@@ -1,3 +1,4 @@
 export type RoutersParamList = {
-    SplashScreen: undefined
+    SplashScreen: undefined,
+    HomeScreen: undefined
 }

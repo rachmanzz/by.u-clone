@@ -2,18 +2,20 @@ import React, {useRef, useEffect, useState} from "react";
 import { StyleSheet, Animated, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import GroupSelfie from "../components/svg/GroupSelfie";
-const styles = StyleSheet.create({
 
-})
+import { StackScreenProps } from '@react-navigation/stack';
+import { RoutersParamList } from "../routeProps";
 
-export default function () {
+type Props = StackScreenProps<RoutersParamList, 'SplashScreen'>
+
+export default function ({navigation}: Props) {
     const backgroundScale = useRef(new Animated.Value(0)).current
     const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff")
     const [showBackGroundAnimate, setShowBackgroundAnimate] = useState<boolean>(true)
     const [showGroupSelfie, setShowGroupSelfie] = useState<boolean>(false)
 
     const endingAnimation = () => {
-
+        setTimeout(()=> navigation.replace('HomeScreen'),5000)
     }
     
     useEffect(()=> {

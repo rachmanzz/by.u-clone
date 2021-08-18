@@ -1,6 +1,20 @@
 import React from "react";
-import { Text } from "react-native";
+import { View, ScrollView, Text, useWindowDimensions } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import YourPlan from "../components/YourPlan";
 
 export default function HomeScreen() {
-    return <Text>Helo Bro</Text>
+    const {width: windowWidth, height: windowHeight} = useWindowDimensions()
+    return (
+        <ScrollView
+            scrollEventThrottle={1}
+            showsHorizontalScrollIndicator={false}
+            pagingEnabled
+            horizontal>
+                <YourPlan style={{width: windowWidth}}/>
+                <View style={{width: windowWidth, backgroundColor: "yellow"}}>
+                    <Text>Helo</Text>
+                </View>
+        </ScrollView>
+    )
 } 
