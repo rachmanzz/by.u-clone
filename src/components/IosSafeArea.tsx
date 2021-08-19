@@ -1,11 +1,11 @@
 import React from "react";
-import { Platform, View } from "react-native";
+import { Platform, View, StatusBar } from "react-native";
 
 
 const IosContent = ({safeArea=true, backgroundColor= "#0967AB", children}: {safeArea?: boolean, backgroundColor?: string, children: any}) => {
     return (
         <View>
-            {safeArea && <View style={{backgroundColor, height: 40}}/>}
+            {safeArea && <View style={{backgroundColor, height: StatusBar.currentHeight || 40}}/>}
             <View style={{flex: 1}}>{children}</View>
         </View>
     )
