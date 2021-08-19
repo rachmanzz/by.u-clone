@@ -6,14 +6,14 @@ import TextField from "./ui/TextField";
 import Svg, { Path } from "react-native-svg";
 
 
-export default function YourPlan ({style}:{style: ViewStyle}) {
+export default function Entertaiment ({style}:{style: ViewStyle}) {
     return (
-        <SafeArea safeArea={true} backgroundColor="#00A3F0">
-            <View style={[{flex: 1, backgroundColor: "#00A3F0", position: "relative"}, style]}>
+        <SafeArea safeArea={true} backgroundColor="#F58020">
+            <View style={[{flex: 1, backgroundColor: "#F58020", position: "relative"}, style]}>
                 
                 <View style={{position: "relative", marginTop: 100}}>
-                    <Liners style={{ position: "absolute" }} color="#FFF" opacity={0.1}/>
-                    <Liners style={{ position: "absolute", marginTop: 27 }} color="#FFF" opacity={0.1}/>
+                    <Liners style={{ position: "absolute" }} color="#000" opacity={0.1}/>
+                    <Liners style={{ position: "absolute", marginTop: 27 }} color="#000" opacity={0.1}/>
                 </View>
                 <View style={{flex: 1, backgroundColor: "#EAEEEE", marginTop: "45%", height:"100%", borderTopLeftRadius: 7, borderTopRightRadius: 7, position: "absolute", width: "100%", zIndex: 1}} />
                 <View style={{position: 'absolute', marginTop: "35%", width: "100%", zIndex: 2, paddingLeft: "5%", paddingRight: "5%"}}>
@@ -29,7 +29,7 @@ export default function YourPlan ({style}:{style: ViewStyle}) {
                                         </Svg>
                                     </View>
                                 </View>
-                                <View style={{backgroundColor: "#DDE2E8", height: '100%', width: 1}}/>
+                                <View style={{backgroundColor: "#EEE", height: '100%', width: 1}}/>
                                 <View>
                                     <TextField size={15} >Sisa Pulsa</TextField>
                                     <View style={{flexDirection: "row", marginTop: 5, alignItems: "center", justifyContent: "center"}}>

@@ -1,12 +1,54 @@
-import React from "react";
-import {View, ViewStyle, StatusBar, Text, useWindowDimensions} from "react-native";
+import React, {useRef} from "react";
+import {View, ViewStyle, Animated, useWindowDimensions, Platform} from "react-native";
 import SafeArea from "./IosSafeArea";
 import Liners from "./svg/Liners";
 import TextField from "./ui/TextField";
-import Svg, { Path } from "react-native-svg";
+import Svg, { Path, SvgUri, Image } from "react-native-svg";
+import discovery from "../assets/img/Discovery.svg";
+import promo from "../assets/img/promo.svg";
+import referral from "../assets/img/referral.svg";
+import topping from "../assets/img/topping.svg";
+import { SvgXml } from 'react-native-svg';
 
 
-export default function YourPlan ({style}:{style: ViewStyle}) {
+export default function UpdatesPlan ({style}:{style: ViewStyle}) {
+    const {height: windowHeight} = useWindowDimensions()
+    const srollY = useRef(new Animated.Value(0)).current
+    const flatListHeight = windowHeight - (windowHeight * (30/100))
+    const data = [
+        {
+            id: '1',
+            xml: promo
+        },
+        {
+            id: '2',
+            xml: referral
+        },
+        {
+            id: '3',
+            xml: discovery
+        },
+        {
+            id: '4',
+            xml: topping
+        },
+    ]
+    console.log(Platform.OS, flatListHeight)
+    const renderItem = ({index, item}: {index: number, item: {xml: string}}) => {
+        const inputRange = [
+            -1, 0, index * 150, 150 * (index + 1)]
+        const opacity = srollY.interpolate({
+            inputRange,
+            outputRange: [1,1, 1, 0]
+        })
+        const residu = Platform.OS === "ios" ? flatListHeight % 150 : flatListHeight % 161.5
+
+        return (
+            <Animated.View key={index} style={{opacity, marginBottom: (data.length -1) === index ? residu/data.length : Platform.OS === "ios" ? 10 : 0, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3}}>
+                <SvgXml width="100%" xml={item.xml} />
+            </Animated.View>
+        )
+    }
     return (
         <SafeArea safeArea={true} backgroundColor="#00A3F0">
             <View style={[{flex: 1, backgroundColor: "#00A3F0", position: "relative"}, style]}>
@@ -18,7 +60,7 @@ export default function YourPlan ({style}:{style: ViewStyle}) {
                 <View style={{flex: 1, backgroundColor: "#EAEEEE", marginTop: "45%", height:"100%", borderTopLeftRadius: 7, borderTopRightRadius: 7, position: "absolute", width: "100%", zIndex: 1}} />
                 <View style={{position: 'absolute', marginTop: "35%", width: "100%", zIndex: 2, paddingLeft: "5%", paddingRight: "5%"}}>
                     <View>
-                        <View style={{width: "100%", justifyContent: "space-around", backgroundColor: "#FFFFFF", height: 80, borderRadius: 5, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3, padding: 10}}>
+                        <View style={{width: "100%", justifyContent: "space-around", backgroundColor: "#FFFFFF", borderRadius: 5, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3, padding: 10}}>
                             <View style={{flexDirection: 'row', justifyContent: "space-evenly"}}>
                                 <View>
                                     <TextField size={15}>Sisa Data</TextField>
@@ -41,8 +83,20 @@ export default function YourPlan ({style}:{style: ViewStyle}) {
                                 </View>
                             </View>
                         </View>
-                        <View style={{paddingTop: "5%"}}>
+                        <View style={{paddingTop: "5%", height: Platform.OS === "ios" ? flatListHeight - 30 : flatListHeight}}>
                             <TextField type="bold" size={16}>Yang Terbaru Dari by.U</TextField>
+                            <Animated.FlatList 
+                                data={data}
+                                style={{marginTop: 5}}
+                                onScroll={Animated.event(
+                                    [{ nativeEvent: { contentOffset: { y: srollY } } }],
+                                    {useNativeDriver: true}
+                                )}
+                                contentContainerStyle={{padding: 0}}
+                                keyExtractor={item => item.id}
+                                showsVerticalScrollIndicator={false}
+                                renderItem={renderItem}
+                            />
                         </View>
                     </View>
                 </View>
