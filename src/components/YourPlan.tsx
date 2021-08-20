@@ -82,7 +82,7 @@ export default function YourPlan ({style}:{style: ViewStyle}) {
                                             <View style={{paddingLeft: 10, flexGrow: 1}}>
                                                 <View style={{flexDirection: "row", justifyContent: "space-between"}}>
                                                     <TextField>Sisa Telfon</TextField>
-                                                    <TextField>0 GB</TextField>
+                                                    <TextField>0 Menit</TextField>
                                                 </View>
                                                 <Progress.Bar progress={0.3} width={null} />
                                             </View>
