@@ -32,7 +32,7 @@ export default function HomeScreen() {
                     <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
                         <Image style={{height: 40, width: 40}} source={require("../assets/img/profile.png")}/>
                         <View style={{paddingLeft: 10, flexGrow: 1}}>
-                            <TextField color="#FFFFFF" type="bold" size={13}>Nurul Annisa</TextField>
+                            <TextField color="#FFFFFF" type="bold" size={14}>Nurul Annisa</TextField>
                             <TextField color="#FFFFFF" size={13}>080-000-000-111</TextField>
                         </View>
                         <Notification color="#FFF"/>

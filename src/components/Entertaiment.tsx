@@ -15,8 +15,8 @@ export default function Entertaiment ({style}:{style: ViewStyle}) {
                     <Liners style={{ position: "absolute" }} color="#000" opacity={0.1}/>
                     <Liners style={{ position: "absolute", marginTop: 27 }} color="#000" opacity={0.1}/>
                 </View>
-                <View style={{flex: 1, backgroundColor: "#EAEEEE", marginTop: "45%", height:"100%", borderTopLeftRadius: 7, borderTopRightRadius: 7, position: "absolute", width: "100%", zIndex: 1}} />
-                <View style={{position: 'absolute', marginTop: "35%", width: "100%", zIndex: 2, paddingLeft: "5%", paddingRight: "5%"}}>
+                <View style={{flex: 1, backgroundColor: "#EAEEEE", marginTop: "50%", height:"100%", borderTopLeftRadius: 7, borderTopRightRadius: 7, position: "absolute", width: "100%", zIndex: 1}} />
+                <View style={{position: 'absolute', marginTop: "38%", width: "100%", zIndex: 2, paddingLeft: "5%", paddingRight: "5%"}}>
                     <View>
                         <View style={{width: "100%", justifyContent: "space-around", backgroundColor: "#FFFFFF", height: 80, borderRadius: 5, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3, padding: 10}}>
                             <View style={{flexDirection: 'row', justifyContent: "space-evenly"}}>
