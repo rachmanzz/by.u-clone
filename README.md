@@ -4,9 +4,8 @@
 In this case, I'm not focus for full functional of application clone, I just make a bit difference like make a simple animation. So, there lot of svg file that replace card view. 
 
 
-<figure class="video_container">
+
 <iframe src="https://drive.google.com/open?id=13qmt8zWuYmKH3RIknoSxAPElVheiOO7j&authuser=2" frameborder="0" allowfullscreen="true"></iframe>
-</figure>
 
 
 
