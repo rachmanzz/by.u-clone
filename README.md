@@ -8,7 +8,7 @@ This source just for learning that I made a clone from [original application](ht
 
 # Result
 
-Because I can't embed video from google drive, so, If you wish to see video preview, just [click this link](https://drive.google.com/open?id=13qmt8zWuYmKH3RIknoSxAPElVheiOO7j&authuser=2)
+Because I can't embed video from google drive. So, If you wish to see video preview, just [click this link](https://drive.google.com/open?id=13qmt8zWuYmKH3RIknoSxAPElVheiOO7j&authuser=2)
 
 # Tools
 
