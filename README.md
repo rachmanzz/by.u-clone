@@ -1,7 +1,7 @@
 # by.u Clone
 
 ## Target
-In this case, In not focus for full functional of application clone, I just make a bit difference like make a simple animation. So, there lot of svg file that replace card view. 
+In this case, I'm not focus for full functional of application clone, I just make a bit difference like make a simple animation. So, there lot of svg file that replace card view. 
 
 # Tools
 
