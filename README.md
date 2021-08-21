@@ -3,6 +3,8 @@
 ## Target
 In this case, I'm not focus for full functional of application clone, I just make a bit difference like make a simple animation. So, there lot of svg file that replace card view. 
 
+This source just for learning that I made a clone from [original application](https://play.google.com/store/apps/details?id=com.byu.id) 
+
 # Tools
 
 1. svgviewer https://www.svgviewer.dev/
