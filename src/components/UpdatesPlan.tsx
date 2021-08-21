@@ -39,8 +39,6 @@ export default function UpdatesPlan ({style}:{style: ViewStyle}) {
             outputRange: [1,1, 1, 0]
         })
         const residu = Platform.OS === "ios" ? flatListHeight % 150 : flatListHeight % 161
-        console.log(Platform.OS, residu/4)
-
         return (
             <Animated.View key={index} style={{opacity, marginBottom: (data.length -1) === index ? (residu/data.length) : Platform.OS === "ios" ? 10 : 0, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3}}>
                 <SvgXml width="100%" xml={item.xml} />

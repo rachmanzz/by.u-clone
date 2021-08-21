@@ -3,11 +3,13 @@ import {View, ViewStyle, StatusBar, Text, useWindowDimensions} from "react-nativ
 import SafeArea from "./IosSafeArea";
 import Liners from "./svg/Liners";
 import TextField from "./ui/TextField";
-import Svg, { Path } from "react-native-svg";
+import { SvgXml } from "react-native-svg";
 import HeadphoneIcon from "./svg/icons/HeadphoneIcon";
 import DiscoverIcon from "./svg/icons/DiscoverIcon";
 import RewardIcon from "./svg/icons/RewardIcon";
 import UserSpaceIcon from "./svg/icons/UserSpaceIcon";
+import miniGame from '../assets/img/miniGame.svg'
+import musicPlayer from '../assets/img/musicPlayer.svg'
 
 
 export default function Entertaiment ({style}:{style: ViewStyle}) {
@@ -52,7 +54,30 @@ export default function Entertaiment ({style}:{style: ViewStyle}) {
                             </View>
                         </View>
                         <View style={{paddingTop: "5%"}}>
-                            <TextField type="bold" size={16}>Yang Terbaru Dari by.U</TextField>
+                            <SvgXml width="100%" style={{
+                                shadowColor: "#000",
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 1,
+                                },
+                                shadowOpacity: 0.22,
+                                shadowRadius: 2.22,
+                                
+                                elevation: 3
+                            }} xml={miniGame} />
+                        </View>
+                        <View style={{paddingTop: "5%"}}>
+                            <SvgXml width="100%" style={{
+                                shadowColor: "#000",
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 1,
+                                },
+                                shadowOpacity: 0.22,
+                                shadowRadius: 2.22,
+                                
+                                elevation: 3
+                            }} xml={musicPlayer} />
                         </View>
                     </View>
                 </View>
