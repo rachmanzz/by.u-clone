@@ -1,8 +1,8 @@
-import React from "react";
-import {View, ViewStyle, StatusBar, Text, useWindowDimensions} from "react-native";
+import React, {useRef, useEffect} from "react";
+import {View, ViewStyle, Animated, TextStyle} from "react-native";
 import SafeArea from "./IosSafeArea";
 import Liners from "./svg/Liners";
-import TextField from "./ui/TextField";
+import TextField, { textProps } from "./ui/TextField";
 import { SvgXml } from "react-native-svg";
 import ToppingIcon from "../assets/img/ToppingIcon.svg"
 import DataIcon from "./svg/icons/DataIcon";
@@ -11,7 +11,6 @@ import ArrowLeftAlt from "./svg/icons/ArrowLeftAlt";
 import * as Progress from 'react-native-progress';
 import PulsaIcon from "./svg/icons/PulsaIcon";
 import TelephoneIcon from "./svg/icons/TelephoneIcon";
-
 
 export default function YourPlan ({style}:{style: ViewStyle}) {
     return (
@@ -66,7 +65,7 @@ export default function YourPlan ({style}:{style: ViewStyle}) {
                                                 <View style={{flexDirection: "row", justifyContent: "space-between", marginBottom: 5}}>
                                                     <TextField type="thin" size={12}>Sisa Total Data</TextField>
                                                     <View style={{flexDirection: "row"}}>
-                                                        <TextField size={13} style={{marginRight: 3}} color="#AF173D" type="medium">5</TextField>
+                                                    <TextField size={13} style={{marginRight: 3}} color="#AF173D" type="medium">5</TextField>
                                                         <TextField size={13} type="medium">GB</TextField>
                                                     </View>
                                                     

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TextStyle } from "react-native";
 
-interface textProps {
+export interface textProps {
     type?: "black" | "black-italic" | "bold" | "bold-italic" | "italic" | "light-italic" | "light" | "medium" | 'medium-italic' | 'reguler' | 'thin' | 'thin-italic',
     children: string,
     size?: number,
