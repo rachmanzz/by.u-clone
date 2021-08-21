@@ -4,6 +4,10 @@ import SafeArea from "./IosSafeArea";
 import Liners from "./svg/Liners";
 import TextField from "./ui/TextField";
 import Svg, { Path } from "react-native-svg";
+import HeadphoneIcon from "./svg/icons/HeadphoneIcon";
+import DiscoverIcon from "./svg/icons/DiscoverIcon";
+import RewardIcon from "./svg/icons/RewardIcon";
+import UserSpaceIcon from "./svg/icons/UserSpaceIcon";
 
 
 export default function Entertaiment ({style}:{style: ViewStyle}) {
@@ -18,26 +22,32 @@ export default function Entertaiment ({style}:{style: ViewStyle}) {
                 <View style={{flex: 1, backgroundColor: "#EAEEEE", marginTop: "50%", height:"100%", borderTopLeftRadius: 7, borderTopRightRadius: 7, position: "absolute", width: "100%", zIndex: 1}} />
                 <View style={{position: 'absolute', marginTop: "38%", width: "100%", zIndex: 2, paddingLeft: "5%", paddingRight: "5%"}}>
                     <View>
-                        <View style={{width: "100%", justifyContent: "space-around", backgroundColor: "#FFFFFF", height: 80, borderRadius: 5, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3, padding: 10}}>
+                        {/* u-coin card */}
+                        <View style={{width: "100%", backgroundColor: "#FFFFFF",  borderRadius: 5, shadowOffset: { width: 0, height: 1}, shadowOpacity: 0.22, shadowRadius: 2.22, elevation: 3, padding: 10}}>
+                            <View style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 5, marginRight: 5 }}>
+                                <TextField size={14} type="bold">uCoin Kamu</TextField>
+                                <TextField size={14} type="bold">90</TextField>
+                            </View>
+                            <View style={{height: 1, backgroundColor: "#EEE", margin: 5}}/>
                             <View style={{flexDirection: 'row', justifyContent: "space-evenly"}}>
-                                <View>
-                                    <TextField size={15}>Sisa Data</TextField>
-                                    <View style={{flexDirection: "row", marginTop: 5, alignItems: "center", justifyContent: "center"}}>
-                                        <TextField type="bold" size={18} style={{marginRight: 5}}>0 GB</TextField> 
-                                        <Svg width={24} height={24} fill="white">
-                                            <Path fill="#01BCF1" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z"/>
-                                        </Svg>
-                                    </View>
+                                <View style={{justifyContent: "center", alignItems: "center"}}>
+                                    <HeadphoneIcon height={30} width={30} />
+                                    <TextField style={{marginTop: 5}}>Play</TextField>
                                 </View>
-                                <View style={{backgroundColor: "#EEE", height: '100%', width: 1}}/>
-                                <View>
-                                    <TextField size={15} >Sisa Pulsa</TextField>
-                                    <View style={{flexDirection: "row", marginTop: 5, alignItems: "center", justifyContent: "center"}}>
-                                        <TextField type="bold" size={18} style={{marginRight: 5}}>Rp 0</TextField> 
-                                        <Svg width={24} height={24} fill="white">
-                                            <Path fill="#01BCF1" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z"/>
-                                        </Svg>
-                                    </View>
+                                <View style={{backgroundColor: "#DDE2E8", height: '100%', width: 1}}/>
+                                <View style={{justifyContent: "center", alignItems: "center"}}>
+                                    <DiscoverIcon height={30} width={30}/>
+                                    <TextField style={{marginTop: 5}}>Discover</TextField>
+                                </View>
+                                <View style={{backgroundColor: "#DDE2E8", height: '100%', width: 1}}/>
+                                <View style={{justifyContent: "center", alignItems: "center"}}>
+                                    <RewardIcon height={30} width={30}/>
+                                    <TextField style={{marginTop: 5}}>Rewards</TextField>
+                                </View>
+                                <View style={{backgroundColor: "#DDE2E8", height: '100%', width: 1}}/>
+                                <View style={{justifyContent: "center", alignItems: "center"}}>
+                                    <UserSpaceIcon height={30} width={30}/>
+                                    <TextField style={{marginTop: 5}}>Rewards</TextField>
                                 </View>
                             </View>
                         </View>
